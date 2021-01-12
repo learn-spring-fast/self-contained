@@ -26,6 +26,7 @@ public class ScoreRepository {
 	}
 
 	public long save(Score score) {
+		System.out.println(score);
 		entityManager.persist(score);
 		System.out.println("Persisted score: " + score.getId() + " wins " + score.getWins() +"  ties " + score.getTies()); 
 		return score.getId();
@@ -41,8 +42,9 @@ public class ScoreRepository {
 			//score = (Score)scores.get(0);
 			score = entityManager.find(Score.class, new Long(1));
 		} else {
+			//System.out.p
 			score = new Score();
-			score.setId(System.currentTimeMillis());
+			//score.setId(System.currentTimeMillis());
 			entityManager.persist(score);
 			System.out.println("New score created with id of: " + score.getId());
 		}

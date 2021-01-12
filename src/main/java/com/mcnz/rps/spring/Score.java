@@ -8,7 +8,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "score", schema="wasadmin")
+@Table(name = "score" )  
 @NamedQuery(query = "select s from Score s", name = "query_find_all_scores")
 public class Score {
 	

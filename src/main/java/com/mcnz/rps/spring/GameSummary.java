@@ -11,8 +11,8 @@ import javax.persistence.Table;
 
 
  
-@Entity
-@Table(name = "GAMESUMMARY")
+@Entity 
+@Table(name = "gamesummary")
 @NamedQuery(query = "select gs from GameSummary gs", name = "query_find_all_summaries")
 public class GameSummary {
 	 
