@@ -1,0 +1,25 @@
+CREATE DATABASE roshambo;
+
+USE roshambo;
+
+CREATE TABLE gamesummary (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    clientGesture varchar(255) NOT NULL,
+    serverGesture varchar(255) NOT NULL,
+    result varchar(255) NOT NULL,
+    date DATETIME,
+    PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE score (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    wins varchar(255) NOT NULL,
+    losses varchar(255) NOT NULL,
+    ties varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO roshambo.gamesummary VALUES (0, 'ROCK','ROCK','TIE', NULL);	
+SELECT * FROM roshambo.gamesummary;
